@@ -6,7 +6,7 @@ RUN set -x && \
     go get github.com/golang/dep/cmd/dep && \
     dep ensure -v
 
-RUN cd cmd/server && go build -o main
+RUN cd ./cmd/server && go build -o main
 
 FROM alpine
 WORKDIR /app 

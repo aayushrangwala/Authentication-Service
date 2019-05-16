@@ -1,9 +1,10 @@
 package main
 
 import (
-	v1 "Authentication-Service/api/v1"
 	"log"
 	"net/http"
+
+	v1 "github.com/aayushrangwala/Authentication-Service/api/v1"
 )
 
 func main() {

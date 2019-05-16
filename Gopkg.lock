@@ -2,6 +2,18 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:d255995606b49fffa14379bcd13450ff4f2d6282d4922fb8cea75f33230795f3"
+  name = "github.com/aayushrangwala/Authentication-Service"
+  packages = [
+    "api/v1",
+    "pkg/services/v1",
+    "util",
+  ]
+  pruneopts = "UT"
+  revision = "1d8f2a56533cc131df9d04400c82c463536921c8"
+
+[[projects]]
   digest = "1:d5f97fc268267ec1b61c3453058c738246fc3e746f14b1ae25161513b7367b0c"
   name = "github.com/gorilla/mux"
   packages = ["."]
@@ -12,6 +24,11 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/gorilla/mux"]
+  input-imports = [
+    "github.com/aayushrangwala/Authentication-Service/api/v1",
+    "github.com/aayushrangwala/Authentication-Service/pkg/services/v1",
+    "github.com/aayushrangwala/Authentication-Service/util",
+    "github.com/gorilla/mux",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

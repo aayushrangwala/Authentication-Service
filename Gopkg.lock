@@ -3,7 +3,7 @@
 
 [[projects]]
   branch = "master"
-  digest = "1:6ecaba818fb5a00f6b2e6c162ea6d111486539ebe922125129f9a202f2e4567b"
+  digest = "1:52eccc70ea7ad2ba107a9da1273f27fe08b89c2e2de2c5eff5f5760d0a6f2b0b"
   name = "github.com/aayushrangwala/Authentication-Service"
   packages = [
     "api/v1",
@@ -11,7 +11,7 @@
     "util",
   ]
   pruneopts = "UT"
-  revision = "afe85f6c1b11d457e9a6170622a72db8f18489e6"
+  revision = "7744568fd0ad08a7cb9cd31fc9ddf47f985749b7"
 
 [[projects]]
   digest = "1:d5f97fc268267ec1b61c3453058c738246fc3e746f14b1ae25161513b7367b0c"

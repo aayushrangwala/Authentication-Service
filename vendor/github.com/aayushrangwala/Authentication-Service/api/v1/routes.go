@@ -1,8 +1,9 @@
 package v1
 
 import (
-	v1 "Authentication-Service/pkg/services/v1"
 	"net/http"
+
+	v1 "github.com/aayushrangwala/Authentication-Service/pkg/services/v1"
 )
 
 // Route struct defines the route mapping

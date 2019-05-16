@@ -1,8 +1,9 @@
 package v1
 
 import (
-	"Authentication-Service/util"
 	"net/http"
+
+	"github.com/aayushrangwala/Authentication-Service/util"
 
 	"github.com/gorilla/mux"
 )

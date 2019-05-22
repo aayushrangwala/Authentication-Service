@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
-
-	"github.com/gorilla/mux"
 )
 
 const (
@@ -15,9 +13,10 @@ const (
 
 // AuthenticateUser authenticate the name of the user if present in DB and returns the status code
 func AuthenticateUser(w http.ResponseWriter, r *http.Request) {
-	vars := mux.Vars(r)
-	userName := vars["user"]
-	if isPresentInDB(userName) {
+	// vars := mux.Vars(r)
+	// userName := vars["user"]
+	username := r.Header.Get("Username")
+	if isPresentInDB(username) {
 		json.NewEncoder(w).Encode(strconv.Itoa(http.StatusOK))
 	} else {
 		json.NewEncoder(w).Encode(strconv.Itoa(http.StatusUnauthorized))

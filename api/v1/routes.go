@@ -17,6 +17,6 @@ type Route struct {
 var route = &Route{
 	"AuthenticateUser",
 	"GET",
-	"/auth/{user}",
+	"/auth",
 	v1.AuthenticateUser,
 }

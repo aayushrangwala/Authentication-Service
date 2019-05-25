@@ -1,9 +1,7 @@
 package v1
 
 import (
-	"encoding/json"
 	"net/http"
-	"strconv"
 )
 
 const (
@@ -15,9 +13,9 @@ const (
 func AuthenticateUser(w http.ResponseWriter, r *http.Request) {
 	username := r.Header.Get("Username")
 	if isPresentInDB(username) {
-		json.NewEncoder(w).Encode(strconv.Itoa(http.StatusOK))
+		w.WriteHeader(http.StatusOK)
 	} else {
-		json.NewEncoder(w).Encode(strconv.Itoa(http.StatusUnauthorized))
+		w.WriteHeader(http.StatusUnauthorized)
 	}
 }
 

@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"log"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -32,6 +33,9 @@ func TestAuthenticateUsertoReturnHttpStatus(t *testing.T) {
 
 	// Unauthorized user test
 	req, err = http.NewRequest("GET", "/auth", nil)
+	if err != nil {
+		log.Fatal("Error while hitting the GET request at /auth", err)
+	}
 
 	rr = httptest.NewRecorder()
 	handler = http.HandlerFunc(AuthenticateUser)
